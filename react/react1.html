@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>React 实例</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+
+<script type="text/babel">
+    const numbers = [1, 2, 3, 4, 5];
+    const listItems = numbers.map((index, todo) =>
+        // 只有在没有确定的 id 时使用
+        <li key={index}>
+            {todo}
+        </li>
+    );
+
+    ReactDOM.render(
+        <ul>{listItems}</ul>,
+        document.getElementById('example')
+    );
+</script>
+
+</body>
+</html>
